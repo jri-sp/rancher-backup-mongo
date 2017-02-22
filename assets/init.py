@@ -8,6 +8,7 @@ from rancher_metadata import MetadataAPI
 __author__ = 'Sebastien LANGOUREAUX'
 
 BACKUP_DIR = '/backup/mongo'
+RESTORE_DIR = '/backup/restore'
 
 
 class ServiceRun():
@@ -34,7 +35,7 @@ class ServiceRun():
       # First, we restore the last backup
       if is_init is True:
           print("Starting init the backup folder")
-          os.system("%s --no-encryption --force %s %s" % (cmd, backend, BACKUP_DIR))
+          os.system("%s --no-encryption --force %s %s" % (cmd, backend, RESTORE_DIR))
 
 
       else:
