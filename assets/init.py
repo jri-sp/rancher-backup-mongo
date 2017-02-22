@@ -34,7 +34,7 @@ class ServiceRun():
       # First, we restore the last backup
       if is_init is True:
           print("Starting init the backup folder")
-          os.system("%s --no-encryption %s %s" % (cmd, backend, BACKUP_DIR))
+          os.system("%s --no-encryption --force %s %s" % (cmd, backend, BACKUP_DIR))
 
 
       else:
